@@ -146,10 +146,19 @@ const Footer = () => {
                 <span className="relative z-10">Privacy Policy</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
               </a>
-              <a className="group relative hover:text-white transition-colors duration-300">
-                <span className="relative z-10">Terms of Service</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
-              </a>
+              <Tooltip
+                id="terms-of-service-tooltip"
+                content="By using this job portal, you agree to provide accurate information, use the platform for lawful job searching and hiring only, and respect other users. We may suspend accounts that violate these terms."
+              >
+                <button
+                  type="button"
+                  aria-describedby="terms-of-service-tooltip"
+                  className="group relative cursor-help hover:text-white focus:text-white focus:outline-none transition-colors duration-300"
+                >
+                  <span className="relative z-10">Terms of Service</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                </button>
+              </Tooltip>
               <Tooltip
                 id="cookie-policy-tooltip"
                 content="We use cookies and local storage to keep you signed in, remember preferences like dark mode, and save your jobs. You can clear them anytime in your browser settings."
