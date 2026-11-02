@@ -182,13 +182,19 @@ const Footer = () => {
                   <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300"></span>
                 </button>
               </Tooltip>
-              <Link
-                to="/contact"
-                className="group relative hover:text-white transition-colors duration-300"
+              <Tooltip
+                id="contact-us-tooltip"
+                content="Having a problem or need help? Click here to send a message to our admin team."
               >
-                <span className="relative z-10">Contact Us</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
-              </Link>
+                <Link
+                  to="/contact"
+                  aria-describedby="contact-us-tooltip"
+                  className="group relative hover:text-white focus:text-white transition-colors duration-300"
+                >
+                  <span className="relative z-10">Contact Us</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
+                </Link>
+              </Tooltip>
             </div>
             <div className="text-center md:text-right">
               <div className="text-gray-400 text-sm mb-2">
